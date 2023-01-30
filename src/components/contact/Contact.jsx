@@ -84,7 +84,7 @@ const Contact = () => {
 
                     <button  className="button button--flex">
                         {sendText}
-                        <Send_SVG />
+                        {/* <Send_SVG /> */}
                     </button> 
 
                 </form>
