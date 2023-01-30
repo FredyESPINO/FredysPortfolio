@@ -1,6 +1,6 @@
 import "./Contact.css"
 import React from 'react'
-import Send_SVG from "../../assets/Send_SVG"
+// import Send_SVG from "../../assets/Send_SVG"
 import {AiFillLinkedin} from "react-icons/ai"
 import {BsGithub} from "react-icons/bs"
 import { useStateContext } from "../../context"
