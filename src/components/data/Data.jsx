@@ -1,6 +1,6 @@
 import React from 'react'
-import Hand_SVG from "../../assets/Hand_SVG"
-import Send_SVG from "../../assets/Send_SVG"
+// import Hand_SVG from "../../assets/Hand_SVG"
+// import Send_SVG from "../../assets/Send_SVG"
 import { useStateContext } from '../../context'
 import {motion} from "framer-motion"
 
@@ -35,7 +35,7 @@ const Data = () => {
         transition={transition}
         href="#contact" className="button button--flex">
         {textLink}
-            <Send_SVG />
+            {/* <Send_SVG /> */}
         </motion.a> 
 
         
