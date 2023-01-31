@@ -154,6 +154,12 @@ img{
   align-items: center;
 }
 
+.icon__send{
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
 
 @media screen and (max-width:992px){
   .container{

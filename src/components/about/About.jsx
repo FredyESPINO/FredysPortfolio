@@ -2,14 +2,15 @@ import "./About.css"
 import React from 'react'
 import AboutImg from "../../assets/about.jpg"
 import Info from "./Info"
-import CV from "../../assets/John-Cv.pdf"
+import CVES from "../../assets/CVES.pdf"
+import CVEN from "../../assets/CVEN.pdf"
 import File_SVG from "../../assets/File_SVG"
 import { useStateContext } from "../../context"
 import {motion} from "framer-motion"
 
 const About = () => {
     const {lenguajeAct,transition,animateCard} =useStateContext()
-    const {about:{title,subtitle,description,textoLink}}=lenguajeAct
+    const {about:{title,subtitle,description,textoLink},idiom}=lenguajeAct
 
     return (
     <section className="about section" id="about">
@@ -30,7 +31,7 @@ const About = () => {
                 <motion.a
                 animate={animateCard}
                 transition={transition}
-                download="" href={CV} className="button button--flex">
+                download="" href={idiom==="ESP"?CVES : CVEN } className="button button--flex">
                     {textoLink}
                     <File_SVG />
                 </motion.a>
