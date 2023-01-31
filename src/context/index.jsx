@@ -64,7 +64,7 @@ const StateContext = ({children}) => {
             firstCard:{titleCard:"1 año",subtitleCard:"Aprendiendo desarrollo web"},
             secondCard:{titleCard:"Contaduria",subtitleCard:"Carrera completada"},
             thirdCard:{titleCard:"Ventas",subtitleCard:"Experiencia al tratar con el cliente"},
-            description:"Sin experiencia en el campo empecé mi camino para poder ser un desarrollador web profesional por la búsqueda de nuevas oportunidades y crecimiento laboral. Mi meta es poder crear experiencias visuales para los visitantes de las páginas web sin descuidar la funcionalidad de las mismas.",
+            description:"Sin experiencia en el campo empecé mi camino para poder ser un desarrollador web profesional por la búsqueda de nuevas oportunidades y crecimiento laboral. Mi meta es poder crear experiencias visuales para los usarios sin descuidar la funcionalidad de las mismas.",
             textoLink:"Descargar CV"
         },
         skills:{
@@ -100,8 +100,8 @@ const StateContext = ({children}) => {
             idiom:"Language"
         },
         home:{
-            title:"Test title",
-            description:"Test text Test text Test text Test text Test text",
+            title:"Web developer junior",
+            description:"New web developer focused in frontend living in Mexico.",
             textLink:"Contact me"
         },
         projects:{
@@ -130,10 +130,10 @@ const StateContext = ({children}) => {
         about:{
             title:"About Me",
             subtitle:"My introduction",
-            firstCard:{titleCard:"Experience",subtitleCard:"8 years of experience"},
-            secondCard:{titleCard:"Completed",subtitleCard:"48+ projects"},
-            thirdCard:{titleCard:"Support",subtitleCard:"Online 24/7"},
-            description:"Test desc Test desc Test desc Test desc Test desc Test desc Test desc Test desc Test desc Test desc Test desc Test desc Test desc. ",
+            firstCard:{titleCard:"1 Year",subtitleCard:"Learning web development"},
+            secondCard:{titleCard:"Accounting",subtitleCard:"Completed university career"},
+            thirdCard:{titleCard:"Selling",subtitleCard:"Experience in suctomer support "},
+            description:"Without experience in the field I started web development in search of new opportunities and professional grow. Mi goal is create visual experiences for the users without forgetting about functionality.",
             textoLink:"Download CV"
         },
         skills:{
