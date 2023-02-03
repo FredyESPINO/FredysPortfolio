@@ -24,7 +24,7 @@ const Backend = () => {
                           Sanity CMS
                         </h3>
                         <span className="skills__level">
-                          {level}(like 1 week basic)
+                          {level}
                         </span>
                     </div>
                 </div>
