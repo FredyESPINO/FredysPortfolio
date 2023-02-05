@@ -239,6 +239,9 @@ transform: translateX(0.25rem);
         height: 300px;
         padding: 0.5rem;
     }
+    .services__title-cont{
+        margin-top: 10px;
+    }
 
 }
 @media screen and (max-width:450px){
