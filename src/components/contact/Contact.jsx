@@ -1,10 +1,11 @@
 import "./Contact.css"
-import React from 'react'
-// import Send_SVG from "../../assets/Send_SVG"
+import React,{useRef,useEffect,useState} from 'react'
+import emailjs from '@emailjs/browser';
 import {AiFillLinkedin} from "react-icons/ai"
 import {BsGithub} from "react-icons/bs"
 import { useStateContext } from "../../context"
 import {motion} from "framer-motion"
+
 
 const Contact = () => {
     const {lenguajeAct,transition,animateCard}=useStateContext()
@@ -12,8 +13,52 @@ const Contact = () => {
             placeholderEmail,placeholderBody,sendText
     }}=lenguajeAct
 
-    console.log(idiom)
+    const form = useRef();
 
+    const sendEmail=async(e)=>{
+        e.preventDefault()
+
+        const emailPromise =()=>emailjs.sendForm("service_3qk1oww","template_icvn9ph",form.current,"LSccLrjotWFB_bJ88")
+        emailPromise()
+        .then((res)=>{
+            if(res.status===200){
+                toast("Mensaje enviado","success")
+            }
+        })
+        .catch(()=>{
+            toast("Error al enviar mensaje","error")
+        }
+            
+        )
+        
+
+        form.current.reset()
+    }
+
+
+const [response, setResponse] = useState(true)
+const [message, setMessage] = useState({message:"",mood:""})
+
+const toast=(message,mood)=>{
+    setMessage({message,mood})
+    setResponse(!response)
+
+}
+useEffect(()=>{
+    const time =setTimeout(()=>{
+    setMessage({message:"",mood:""})
+    },2000)
+
+    return ()=>{
+        clearTimeout(time)
+    }
+},[response])
+
+
+
+
+
+    
   return (
     <motion.section 
     animate={animateCard}
@@ -27,6 +72,8 @@ const Contact = () => {
                 <h3 className="contact__title">
                     {linksTitle}
                 </h3>
+
+
 
                 <div className="contact__info">
                     <div className="contact__card">
@@ -62,7 +109,7 @@ const Contact = () => {
                     {inputTitle}
                 </h3>
 
-                <form  className="contact__form">
+                <form  className="contact__form" ref={form} onSubmit={(e)=>sendEmail(e)}>
                     <div className="contact__form-div">
                         <label  className="contact__form-ta">Name</label>
                         <input type="text" name="name" className="contact__form-input" placeholder={placeholderName} />
@@ -82,10 +129,10 @@ const Contact = () => {
 
                     </div>
 
-                    <button  className="button button--flex">
-                        {sendText}
-                                <svg
-                  class="button__icon"
+                    <button  className={`button__contact button__contact--flex ${message.mood}`} >
+                        { message.message==="" ? sendText : message.message}
+                        <svg
+                  className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -101,7 +148,6 @@ const Contact = () => {
                     fill="white"
                   ></path>
                 </svg>
-                        {/* <Send_SVG /> */}
                     </button> 
 
                 </form>
