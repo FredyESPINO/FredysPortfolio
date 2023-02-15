@@ -32,7 +32,7 @@ const StateContext = ({children}) => {
         },
         home:{
             title:"Desarrollador Web Junior.",
-            description:"Nuevo desarrollador web frontend autodidacta con residencia en México. ",
+            description:"Desarrollador web junior frontend autodidacta con residencia en México. ",
             textLink:"Contactame"
         },
         projects:{

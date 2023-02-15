@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import "./Header.css"
 import { useStateContext } from '../../context'
 import {TbFileStar} from "react-icons/tb"
+import {TfiWorld} from "react-icons/tfi"
 import {motion} from "framer-motion"
 
 
@@ -75,7 +76,7 @@ const Header = () => {
                         animate={animateCard}
                         transition={transition}
                         className="nav__item nav__link nav__changeLen" onClick={changeLen}>
-                            <i className="uil uil-message nav__icon"></i>{idiom}
+                            <TfiWorld className="uil uil-message nav__icon"/>{idiom}
                         </motion.li>
                     </ul>
 
